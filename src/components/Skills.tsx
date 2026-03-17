@@ -1,0 +1,37 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+const skills = [
+  "Python", "C++", "SQL", "HTML/CSS", "TensorFlow", "Pandas", 
+  "Scikit-Learn", "Natural Language Processing", "Machine Learning", 
+  "Deep Learning", "Data Analysis", "Predictive Modeling"
+];
+
+export default function Skills() {
+  return (
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl font-bold text-brown-dark dark:text-gray-100">My Toolkit</h2>
+        <p className="text-brown-medium dark:text-gray-400 mt-4 max-w-2xl mx-auto font-light">
+          Languages, frameworks, and tools I use to build scalable web applications and intelligent systems.
+        </p>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-4">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={skill}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: index * 0.05 }}
+            className="px-6 py-3 bg-peach dark:bg-[#1A1A1A] text-brown-dark dark:text-gray-200 rounded-full shadow-sm border border-border/30 dark:border-[#333333] hover:border-accent hover:text-accent dark:hover:border-accent dark:hover:text-accent transition-colors font-medium cursor-default"
+          >
+            {skill}
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
