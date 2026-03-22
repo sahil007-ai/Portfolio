@@ -6,18 +6,52 @@ import { useState } from "react";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("Something went wrong. Please try again.");
+  const formSubmitEndpoint = "https://formsubmit.co/ajax/sahilsomyani007@gmail.com";
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
+    setErrorMessage("Something went wrong. Please try again.");
     const form = e.currentTarget;
-    
-    // Simulate network request since formspree endpoint is not finalized
-    setTimeout(() => {
-        setStatus("success");
-        form.reset();
-        setTimeout(() => setStatus("idle"), 3000);
-    }, 1000);
+
+    try {
+      const formData = new FormData(form);
+      const payload = {
+        name: String(formData.get("name") ?? ""),
+        email: String(formData.get("email") ?? ""),
+        message: String(formData.get("message") ?? ""),
+      };
+
+      const response = await fetch(formSubmitEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...payload,
+          _subject: `New portfolio message from ${payload.name}`,
+          _captcha: "false",
+          _template: "table",
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        setStatus("error");
+        setErrorMessage(data.error ?? "Unable to send your message right now.");
+        return;
+      }
+
+      setStatus("success");
+      form.reset();
+      setTimeout(() => setStatus("idle"), 3000);
+    } catch {
+      setStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
+    }
   };
 
   return (
@@ -82,7 +116,7 @@ export default function Contact() {
               <p className="text-green-600 dark:text-green-400 text-sm mt-2 text-center font-medium">Message sent successfully!</p>
             )}
             {status === "error" && (
-              <p className="text-red-600 dark:text-red-400 text-sm mt-2 text-center font-medium">Something went wrong. Please try again.</p>
+              <p className="text-red-600 dark:text-red-400 text-sm mt-2 text-center font-medium">{errorMessage}</p>
             )}
           </form>
         </div>
