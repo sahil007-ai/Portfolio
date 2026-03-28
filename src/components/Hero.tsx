@@ -45,7 +45,7 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="text-xl md:text-2xl text-brown-medium dark:text-gray-300 mb-10 max-w-2xl font-light"
         >
-          Aspiring <span className="font-medium text-brown-dark dark:text-gray-100">Data Scientist & AI Engineer</span> | Machine Learning Specialist
+          <span className="font-medium text-brown-dark dark:text-gray-100">Data Scientist & AI Engineer</span> | Machine Learning Specialist
         </motion.p>
 
         <motion.div 

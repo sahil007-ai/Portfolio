@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "Python", "C++", "SQL", "HTML/CSS", "TensorFlow", "Pandas", 
+  "Python", "C++", "SQL", "TensorFlow", "Pandas", 
   "Scikit-Learn", "Natural Language Processing", "Machine Learning", 
   "Deep Learning", "Data Analysis", "Predictive Modeling"
 ];
