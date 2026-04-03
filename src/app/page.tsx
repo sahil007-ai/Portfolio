@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Achievements from "@/components/Achievements";
 import Leadership from "@/components/Leadership";
+import TheBridge from "@/components/TheBridge";
 import Contact from "@/components/Contact";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Projects />
       <Achievements />
       <Leadership />
+      <TheBridge />
       <Contact />
       
       <footer className="py-8 text-center text-brown-medium dark:text-gray-500 font-light text-sm border-t border-border/10 dark:border-[#333333]/50">
