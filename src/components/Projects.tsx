@@ -10,7 +10,7 @@ import rehypeRaw from "rehype-raw";
 const projects = [
   {
     name: "Plan4U",
-    description: "A full-stack gamified study planner with local AI integration using Ollama for analyzing syllabi and tasks.",
+    description: "Students were drowning in syllabi with no system to manage them. I built a gamified AI-powered planner that analyses your coursework and tells you exactly what to study and when. Built with Ollama for local AI — no data leaves your device.",
     tech: ["JavaScript", "HTML", "CSS", "AI/Ollama"],
     link: "https://github.com/sahil007-ai/raisoni",
     demo: "",
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: "Zedge Automation",
-    description: "A Python bot designed to automatically generate black screen wallpapers with quotes for the Zedge platform.",
+    description: "Content creators waste hours manually formatting quote wallpapers. I built a Python bot that automatically generates, formats, and creates black screen quote wallpapers for Zedge. It turns a tedious manual process into a hands-free content pipeline.",
     tech: ["Python", "Automation"],
     link: "https://github.com/sahil007-ai/zedge_automation_project",
     demo: "",
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     name: "Image Compressor",
-    description: "Bulk image compressor script for JPEG and PNG images to optimize and target specific file sizes efficiently.",
+    description: "Large images slow down websites and eat up storage, but hand-compressing them is painfully slow. I wrote a bulk compressor script for JPEGs and PNGs that automatically targets specific file sizes. It saves massive amounts of time and bandwidth with a single command.",
     tech: ["Python", "Pillow"],
     link: "https://github.com/sahil007-ai/Image_compressor",
     demo: "",
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     name: "Focus Guard AI",
-    description: "AI-powered Pomodoro timer with focus detection using MediaPipe to keep you productive.",
+    description: "Traditional Pomodoro timers don't actually know if you're working or just scrolling on your phone. I built an AI-powered timer using MediaPipe computer vision to detect your actual focus state. It forces real productivity by pausing the timer the second you look away.",
     tech: ["Python", "MediaPipe", "Computer Vision"],
     link: "https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro",
     demo: "",
