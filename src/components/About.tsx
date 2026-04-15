@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Code2 } from "lucide-react";
+import { Code2 } from "lucide-react";
 
 export default function About() {
   return (
@@ -20,18 +20,14 @@ export default function About() {
         
         <div className="space-y-6 text-lg text-brown-medium dark:text-gray-300 leading-relaxed font-light">
           <p>
-            Hello! I&apos;m Sahil, a Data Science and AI Engineering enthusiast currently pursuing my B.Tech in Artificial Intelligence at 
-            <span className="font-medium text-brown-dark dark:text-gray-100"> J D College of Engineering &amp; Management</span> (CGPA: 8.5).
+            I&apos;m a final-year AI engineering student focused on building intelligent systems. I believe that the most powerful machine learning model in the world requires clean architecture and practical applications to truly make an impact.
           </p>
           <p>
-            My journey into tech is driven by a passion for predictive modeling and actionable analytics. 
-            I have a strong foundation in <strong className="text-brown-dark dark:text-gray-100">C++</strong> and <strong className="text-brown-dark dark:text-gray-100">Python</strong>,
-            with specialized skills in Machine Learning, Deep Learning, and NLP. I thrive on translating complex datasets into strategic insights and communicative solutions.
+            When I&apos;m not training models, I&apos;m hosting workshops, anchoring stages, and apparently solving algorithmic problems with my monitor turned off. Make of that what you will.
           </p>
-          <div className="pt-4 flex items-center text-accent font-medium">
-            <MapPin className="w-5 h-5 mr-2" />
-            Nagpur, Maharashtra, India
-          </div>
+          <p className="pt-2 font-medium">
+            Based in Nagpur. Working globally. Always thinking about the next problem worth solving.
+          </p>
         </div>
       </motion.div>
     </section>
