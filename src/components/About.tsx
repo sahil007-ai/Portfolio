@@ -20,7 +20,7 @@ export default function About() {
         
         <div className="space-y-6 text-lg text-brown-medium dark:text-gray-300 leading-relaxed font-light">
           <p>
-            I&apos;m a final-year AI engineering student focused on building intelligent systems. I believe that the most powerful machine learning model in the world requires clean architecture and practical applications to truly make an impact.
+            I&apos;m a 3rd-year AI engineering student focused on building intelligent systems. I believe that the most powerful machine learning model in the world requires clean architecture and practical applications to truly make an impact.
           </p>
           <p>
             When I&apos;m not training models, I&apos;m hosting workshops, anchoring stages, and apparently solving algorithmic problems with my monitor turned off. Make of that what you will.
