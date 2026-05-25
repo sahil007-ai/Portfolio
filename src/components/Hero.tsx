@@ -36,7 +36,7 @@ export default function Hero() {
           transition={{ delay: 0.2, duration: 0.5 }}
           className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
         >
-          I build <span className="text-accent">intelligent systems</span>.<br/> Then I write copy that <span className="text-accent">sells them</span>.
+          I architect <span className="text-accent">GenAI systems</span>.<br/> Then I explain them in <span className="text-accent">plain English</span>.
         </motion.h1>
 
         <motion.p 
@@ -45,7 +45,7 @@ export default function Hero() {
           transition={{ delay: 0.4, duration: 0.5 }}
           className="text-lg md:text-xl text-brown-medium dark:text-gray-300 mb-10 max-w-3xl font-light leading-relaxed"
         >
-          I&apos;m Sahil — an AI engineer and copywriter from Nagpur. I sit at the rare intersection of technical depth and human communication. Whether you need a machine learning solution or words that make people act, I speak both languages fluently.
+          I&apos;m Sahil — an AI engineer specializing in LLMs, RAG systems, and prompt engineering. I build production-ready AI solutions and have the rare ability to translate complex technical concepts into clear documentation. Most engineers can code. Few can communicate why it matters.
         </motion.p>
 
         <motion.div 
@@ -58,14 +58,14 @@ export default function Hero() {
             href="#projects"
             className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-white bg-accent hover:bg-accent-hover rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
-            See My Tech Work
+            View GenAI Projects
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
           <a
-            href="/copy"
+            href="#contact"
             className="inline-flex items-center justify-center px-8 py-3.5 text-base font-medium text-brown-dark dark:text-gray-100 bg-surface dark:bg-[#1E1E1E] border border-border dark:border-[#333333] hover:bg-opacity-80 dark:hover:bg-[#2A2A2A] rounded-full transition-all shadow-md hover:-translate-y-0.5"
           >
-            Need a Copywriter?
+            Let&apos;s Talk AI
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </motion.div>
