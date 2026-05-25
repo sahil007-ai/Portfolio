@@ -3,21 +3,15 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  // LLM & GenAI Core
-  "LangChain", "LlamaIndex", "OpenAI API", "Anthropic Claude", 
-  "HuggingFace Transformers", "Prompt Engineering", 
+  // LLM & GenAI Core (What you know + Essential for role)
+  "LangChain", "LangGraph", "Prompt Engineering", "Python",
   
-  // RAG & Vector Systems
-  "RAG Systems", "Pinecone", "ChromaDB", "Vector Databases",
-  "Semantic Search", "Embeddings",
+  // Essential GenAI Skills (Industry standard - learning these)
+  "OpenAI API", "RAG Systems", "Vector Databases", 
+  "LlamaIndex", "HuggingFace Transformers",
   
-  // ML & AI Foundations
-  "Python", "TensorFlow", "PyTorch", "Fine-tuning LLMs",
-  "NLP", "Computer Vision", "MediaPipe",
-  
-  // Development & Tools
-  "FastAPI", "Streamlit", "Git", "Docker",
-  "REST APIs", "SQL", "C++"
+  // Supporting Skills
+  "Git", "SQL", "C++", "REST APIs"
 ];
 
 export default function Skills() {
