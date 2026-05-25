@@ -25,24 +25,6 @@ const genAIProjects = [
     demo: "https://sahil.page/projects/wikipedia-assistant",
     stars: 0,
     status: "Live"
-  },
-  {
-    name: "PDF Insight Extractor",
-    description: "Upload any PDF and ask questions about its content. Uses advanced RAG architecture with document chunking, embedding generation, and conversational memory. Handles complex multi-page documents, maintains context across questions, and provides page-specific citations. Built with LangChain document loaders and vector store integration.",
-    tech: ["LangChain", "RAG", "OpenAI API", "Vector Databases", "Document Processing"],
-    link: "#",
-    demo: "",
-    stars: 0,
-    status: "Planned"
-  },
-  {
-    name: "Code Review AI Agent",
-    description: "Intelligent code reviewer that analyzes code submissions for bugs, security vulnerabilities, and best practices. Uses LangGraph for multi-step analysis workflow: syntax checking → logic review → security audit → suggestions generation. Provides actionable feedback with line-specific comments and refactoring recommendations.",
-    tech: ["LangGraph", "LangChain", "Python", "Code Analysis", "Multi-Agent Systems"],
-    link: "#",
-    demo: "",
-    stars: 0,
-    status: "Planned"
   }
 ];
 
@@ -289,7 +271,7 @@ export default function Projects() {
             <h2 className="text-3xl font-bold text-brown-dark dark:text-gray-100">GenAI Projects</h2>
           </div>
           <p className="text-brown-medium dark:text-gray-400 mt-4 max-w-2xl mx-auto font-light">
-            Production-ready LLM applications showcasing LangChain, LangGraph, RAG systems, and multi-agent orchestration. Built from scratch with deep understanding of GenAI architectures.
+            LLM applications I&apos;ve built while learning LangChain, LangGraph, and multi-agent orchestration. Live demos and source where available — more shipping soon.
           </p>
         </div>
 

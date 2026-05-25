@@ -20,16 +20,16 @@ export default function About() {
         
         <div className="space-y-6 text-lg text-brown-medium dark:text-gray-300 leading-relaxed font-light">
           <p>
-            I&apos;m a final-year AI engineering student specializing in large language models and generative AI. While most engineers are still learning prompt engineering, I&apos;ve been building production-ready LLM applications with RAG architectures, fine-tuning pipelines, and multi-agent orchestration.
+            I&apos;m a third-year AI engineering student at JDCOEM, Nagpur, focused on large language models and agent-based systems. I&apos;m currently going deep on LangChain and LangGraph — building small projects, breaking them, and writing about what I learn along the way.
           </p>
           <p>
-            I chose to master technical writing alongside engineering — not as a backup, but because I realised that the most sophisticated AI system is worthless if engineers can&apos;t understand the architecture, stakeholders can&apos;t grasp the value, and users can&apos;t figure out how to use it.
+            I picked up technical writing alongside engineering because I noticed something simple: the systems that actually get adopted are the ones whose architecture, value, and usage can be explained clearly. So I practice both — shipping the system and explaining it.
           </p>
           <p>
-            When I&apos;m not training models or architecting LLM systems, I&apos;m teaching others how to build them. I&apos;ve hosted technical workshops, mentored peers on AI engineering, and apparently can solve algorithmic problems with my monitor turned off (blind coding competition winner).
+            Outside of LLM projects, I host workshops for juniors at my college, mentor peers on AI tooling, and occasionally compete in coding events (including one I won with my monitor turned off).
           </p>
           <p className="pt-2 font-medium">
-            Based in Nagpur. Building GenAI solutions. Always thinking about the next AI problem worth solving.
+            Based in Nagpur. Looking for my first GenAI internship. Always chewing on the next AI problem worth learning from.
           </p>
         </div>
       </motion.div>
