@@ -18,8 +18,8 @@ const projects = [
   },
   {
     name: "Focus Guard AI",
-    description: "Real-time computer vision system that tracks user attention during productivity sessions using MediaPipe face mesh detection. Implements continuous attention monitoring with pose estimation to detect focus drift. Built ML pipeline for real-time inference with sub-100ms latency. Addresses the core problem traditional timers can't solve: verifying actual human engagement.",
-    tech: ["Python", "MediaPipe", "Computer Vision", "Real-time ML", "OpenCV"],
+    description: "AI-powered Pomodoro timer that uses computer vision to detect user attention during productivity sessions. Implements continuous focus monitoring to verify actual engagement—solving the core problem traditional timers can't address. Built with Python and real-time processing to track attention drift and pause automatically when focus is lost.",
+    tech: ["Python", "Computer Vision", "Real-time Processing"],
     link: "https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro",
     demo: "",
     stars: 0
