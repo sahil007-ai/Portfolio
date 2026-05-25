@@ -7,7 +7,7 @@ import { useState } from "react";
 interface SkillData {
   name: string;
   description: string;
-  status: "expert" | "learning" | "proficient";
+  status: "expert" | "proficient" | "familiar" | "learning";
   projects: {
     name: string;
     status: "completed" | "in-progress" | "planned";
@@ -19,27 +19,25 @@ const skillsData: SkillData[] = [
   {
     name: "LangChain",
     description: "Framework for building LLM applications with chains, agents, and memory. Used for orchestrating complex AI workflows.",
-    status: "proficient",
+    status: "familiar",
     projects: [
       { name: "LangGraph Game Generator", status: "in-progress" },
-      { name: "Wikipedia Research Assistant", status: "in-progress" },
-      { name: "PDF Insight Extractor", status: "planned" }
+      { name: "Wikipedia Research Assistant", status: "in-progress" }
     ]
   },
   {
     name: "LangGraph",
     description: "State machine framework for building multi-agent systems. Enables complex agent workflows with conditional logic and cycles.",
-    status: "proficient",
+    status: "familiar",
     projects: [
       { name: "LangGraph Game Generator", status: "in-progress" },
-      { name: "Wikipedia Research Assistant", status: "in-progress" },
-      { name: "Code Review AI Agent", status: "planned" }
+      { name: "Wikipedia Research Assistant", status: "in-progress" }
     ]
   },
   {
     name: "Prompt Engineering",
     description: "Crafting effective prompts for LLMs to get optimal outputs. Includes few-shot learning, chain-of-thought, and system prompt design.",
-    status: "expert",
+    status: "proficient",
     projects: [
       { name: "Plan4U - AI Study Planner", status: "completed" },
       { name: "LangGraph Game Generator", status: "in-progress" }
@@ -48,7 +46,7 @@ const skillsData: SkillData[] = [
   {
     name: "Python",
     description: "Primary language for AI/ML development. Used for backend APIs, data processing, and LLM application development.",
-    status: "expert",
+    status: "proficient",
     projects: [
       { name: "Wikipedia Research Assistant", status: "in-progress" },
       { name: "LangGraph Game Generator", status: "in-progress" },
@@ -63,8 +61,7 @@ const skillsData: SkillData[] = [
     description: "Industry-standard API for GPT models. Learning to integrate GPT-4 for production applications with proper error handling.",
     status: "learning",
     projects: [
-      { name: "Wikipedia Research Assistant", status: "planned" },
-      { name: "PDF Insight Extractor", status: "planned" }
+      { name: "Wikipedia Research Assistant", status: "planned" }
     ]
   },
   {
@@ -72,8 +69,7 @@ const skillsData: SkillData[] = [
     description: "Retrieval-Augmented Generation for answering questions using external knowledge. Learning document chunking, embeddings, and retrieval strategies.",
     status: "learning",
     projects: [
-      { name: "Wikipedia Research Assistant", status: "planned" },
-      { name: "PDF Insight Extractor", status: "planned" }
+      { name: "Wikipedia Research Assistant", status: "planned" }
     ]
   },
   {
@@ -81,17 +77,14 @@ const skillsData: SkillData[] = [
     description: "Databases optimized for similarity search using embeddings. Learning Pinecone, ChromaDB for efficient semantic search.",
     status: "learning",
     projects: [
-      { name: "Wikipedia Research Assistant", status: "planned" },
-      { name: "PDF Insight Extractor", status: "planned" }
+      { name: "Wikipedia Research Assistant", status: "planned" }
     ]
   },
   {
     name: "LlamaIndex",
     description: "Data framework for connecting LLMs with external data sources. Alternative to LangChain for document indexing and retrieval.",
     status: "learning",
-    projects: [
-      { name: "PDF Insight Extractor", status: "planned" }
-    ]
+    projects: []
   },
   {
     name: "HuggingFace Transformers",
@@ -141,6 +134,7 @@ export default function Skills() {
     switch (status) {
       case "expert": return "border-green-500 dark:border-green-400";
       case "proficient": return "border-blue-500 dark:border-blue-400";
+      case "familiar": return "border-orange-500 dark:border-orange-400";
       case "learning": return "border-yellow-500 dark:border-yellow-400";
       default: return "border-border/30 dark:border-[#333333]";
     }
@@ -190,7 +184,7 @@ export default function Skills() {
       </div>
 
       {/* Legend */}
-      <div className="flex justify-center gap-6 mt-8 text-sm text-brown-medium dark:text-gray-400">
+      <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm text-brown-medium dark:text-gray-400">
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-green-500 dark:bg-green-400"></div>
           <span>Expert</span>
@@ -198,6 +192,10 @@ export default function Skills() {
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-blue-500 dark:bg-blue-400"></div>
           <span>Proficient</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <div className="w-3 h-3 rounded-full bg-orange-500 dark:bg-orange-400"></div>
+          <span>Familiar</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-3 h-3 rounded-full bg-yellow-500 dark:bg-yellow-400"></div>
@@ -235,10 +233,12 @@ export default function Skills() {
                   <span className={`text-xs px-3 py-1 rounded-full font-medium ${
                     selectedSkill.status === "expert" ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300" :
                     selectedSkill.status === "proficient" ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300" :
+                    selectedSkill.status === "familiar" ? "bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300" :
                     "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300"
                   }`}>
                     {selectedSkill.status === "expert" ? "⭐ Expert" :
                      selectedSkill.status === "proficient" ? "💪 Proficient" :
+                     selectedSkill.status === "familiar" ? "🛠️ Familiar" :
                      "📚 Learning"}
                   </span>
                 </div>
