@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Sahil Somyani — GenAI Resume</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.4in 0.55in;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 9.8pt;
+    line-height: 1.22;
+    color: #111;
+    margin: 0;
+  }
+  a { color: #111; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  header { text-align: center; margin-bottom: 4px; }
+  header h1 {
+    font-size: 20pt;
+    margin: 0 0 1px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  header .contact {
+    font-size: 9.3pt;
+    color: #222;
+  }
+  header .contact a { color: #222; }
+
+  /* Section */
+  h2 {
+    font-size: 10.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1px;
+    margin: 6px 0 3px 0;
+    font-weight: 700;
+  }
+
+  p { margin: 0 0 3px 0; }
+  p.summary { margin-bottom: 3px; }
+
+  /* Education / Experience row */
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
+  .row .left { font-weight: 700; }
+  .row .right { font-size: 9pt; color: #333; white-space: nowrap; }
+  .row.sub { font-size: 9.3pt; }
+  .row.sub .left { font-style: italic; font-weight: 400; }
+  .row.sub .right { font-style: italic; }
+
+  ul { margin: 1px 0 3px 16px; padding: 0; }
+  ul li { margin: 0 0 1px 0; }
+
+  /* Skills lines */
+  .skills { margin-top: 2px; }
+  .skills li { list-style: none; margin-left: -16px; margin-bottom: 1px; }
+  .skills strong { display: inline-block; min-width: 120px; }
+
+  /* Projects header */
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0;
+    margin-top: 2px;
+  }
+  .project-header .name { font-weight: 700; }
+  .project-header .stack { font-style: italic; font-weight: 400; color: #333; font-size: 9.3pt; }
+  .project-header .links { font-size: 9pt; color: #333; white-space: nowrap; }
+  .project-header .links a { color: #333; text-decoration: underline; }
+
+  /* Achievements list, certifications list */
+  ul.tight { margin: 1px 0 2px 16px; }
+  ul.tight li { margin: 0; }
+
+  /* compact at the bottom so it fits on 1 page */
+  section { margin-bottom: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sahil Somyani</h1>
+  <div class="contact">
+    Nagpur, Maharashtra, India &nbsp;|&nbsp;
+    <a href="mailto:sahilsomyani007@gmail.com">sahilsomyani007@gmail.com</a> &nbsp;|&nbsp;
+    +91-XXXXXXXXXX
+  </div>
+  <div class="contact">
+    <a href="https://sahil.page">sahil.page</a> &nbsp;|&nbsp;
+    <a href="https://github.com/sahil007-ai">github.com/sahil007-ai</a> &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/sahil-somyani-637270319/">linkedin.com/in/sahil-somyani</a>
+  </div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p class="summary">
+    Third-year B.Tech AI student building LLM applications with LangChain and LangGraph. Live multi-agent project at <a href="https://sahil.page/projects/wikipedia-assistant">sahil.page</a>. Comfortable across the GenAI prototyping stack (Python, FastAPI, Next.js) and classical ML (XGBoost, SHAP). Looking for a GenAI internship to go deeper on RAG and agentic systems.
+  </p>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="row">
+    <span class="left">JD College of Engineering and Management</span>
+    <span class="right">Nagpur, India</span>
+  </div>
+  <div class="row sub">
+    <span class="left">B.Tech in Artificial Intelligence &mdash; CGPA 8.35 / 10.0</span>
+    <span class="right">Aug 2024 &ndash; May 2028 (Expected)</span>
+  </div>
+  <ul class="tight">
+    <li>Coursework: Machine Learning, Probability &amp; Statistics, Linear Algebra, Data Structures &amp; Algorithms, DBMS, Data Visualization.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Technical Skills</h2>
+  <ul class="skills">
+    <li><strong>GenAI &amp; LLMs:</strong> LangChain, LangGraph, Ollama (local LLM), prompt engineering, multi-agent workflows, Tavily Search, FastAPI for LLM serving.</li>
+    <li><strong>Languages:</strong> Python, JavaScript / TypeScript, SQL, C++.</li>
+    <li><strong>ML &amp; Data:</strong> scikit-learn, XGBoost, SHAP, SMOTE, Pandas, NumPy, Matplotlib, Streamlit.</li>
+    <li><strong>Computer Vision:</strong> OpenCV, MediaPipe.</li>
+    <li><strong>Web &amp; Tooling:</strong> Next.js, Tailwind CSS, Git, GitHub, REST APIs.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Projects</h2>
+
+  <div class="project-header">
+    <span><span class="name">Quick Wiki Research Assistant</span> &nbsp;<span class="stack">| LangGraph, LangChain, FastAPI, Tavily, Python</span></span>
+    <span class="links"><a href="https://sahil.page/projects/wikipedia-assistant">Live Demo</a> | <a href="https://github.com/sahil007-ai/quick-wiki">GitHub</a></span>
+  </div>
+  <ul>
+    <li>Shipped a multi-agent research assistant on LangGraph that turns a single topic prompt into a sourced report with citations.</li>
+    <li>Spawns AI analyst personas with distinct expertise, runs Wikipedia and Tavily searches in parallel, then synthesizes findings via state-managed iterative refinement.</li>
+    <li>Live demo serves real traffic; backend instrumented for token usage and per-step latency.</li>
+  </ul>
+
+  <div class="project-header">
+    <span><span class="name">Plan4U &mdash; Local LLM Study Planner</span> &nbsp;<span class="stack">| JavaScript, Ollama, Prompt Engineering</span></span>
+    <span class="links"><a href="https://github.com/sahil007-ai/raisoni">GitHub</a></span>
+  </div>
+  <ul>
+    <li>Built a privacy-first study planner that runs an open-source LLM locally via Ollama &mdash; no data leaves the user's device.</li>
+    <li>Designed structured prompts to extract course metadata, learning outcomes, and deadlines from unstructured syllabus text and produce a personalized weekly plan.</li>
+  </ul>
+
+  <div class="project-header">
+    <span><span class="name">Customer Churn &amp; Behavioural Analytics</span> &nbsp;<span class="stack">| Python, XGBoost, SHAP, SMOTE, Streamlit</span></span>
+    <span class="links"><a href="https://github.com/sahil007-ai">GitHub</a></span>
+  </div>
+  <ul>
+    <li>Built an attrition-risk classifier on ~10,000 customer records and reached <strong>F1 = 0.88</strong> after addressing class imbalance with SMOTE oversampling.</li>
+    <li>Used SHAP feature attributions to surface the strongest churn drivers (contract type, tenure, monthly charges) and translated them into retention recommendations.</li>
+    <li>Wrapped the model in a Streamlit dashboard with cluster-level segmentation and a high-risk customer view.</li>
+  </ul>
+
+  <div class="project-header">
+    <span><span class="name">Focus Guard &mdash; CV-based Pomodoro Timer</span> &nbsp;<span class="stack">| Python, OpenCV, MediaPipe</span></span>
+    <span class="links"><a href="https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro">GitHub</a></span>
+  </div>
+  <ul>
+    <li>Real-time desktop app that monitors user attention during focus sessions using MediaPipe head pose and Eye Aspect Ratio (EAR) for drowsiness.</li>
+    <li><strong>1st Place, Mini Project Exhibition 2025</strong> &mdash; pauses sessions automatically when attention drops below threshold.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Achievements</h2>
+  <ul class="tight">
+    <li><strong>1st Place</strong> &mdash; Mini Project Exhibition 2025, JD College of Engineering (<em>Focus Guard</em>).</li>
+    <li>Selected as Resume Workshop Facilitator and Peer Mentor at JDCOEM (2025 &ndash; present).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <ul class="tight">
+    <li><strong>Kaggle Learn</strong> &mdash; Intro to Machine Learning + Intermediate Machine Learning (data analysis, feature engineering, model tuning).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Leadership &amp; Volunteering</h2>
+  <div class="row">
+    <span class="left">National Service Scheme (NSS)</span>
+    <span class="right">2024 &ndash; Present</span>
+  </div>
+  <div class="row sub">
+    <span class="left">Education Volunteer &amp; STEM Mentor</span>
+    <span class="right"></span>
+  </div>
+  <ul class="tight">
+    <li>Mentor underprivileged school students; break down STEM concepts for non-technical audiences &mdash; core practice for technical communication.</li>
+  </ul>
+</section>
+
+</body>
+</html>

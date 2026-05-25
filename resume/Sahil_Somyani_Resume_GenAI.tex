@@ -1,0 +1,183 @@
+%-------------------------
+% Sahil Somyani — GenAI Internship Resume
+% Based on Jake Gutierrez's resume template (MIT licensed)
+% https://github.com/jakegut/resume
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable / ATS friendly
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
+%-------------------------------------------
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Sahil Somyani} \\ \vspace{1pt}
+    \small Nagpur, Maharashtra, India $|$ \href{mailto:sahilsomyani007@gmail.com}{sahilsomyani007@gmail.com} $|$ +91-XXXXXXXXXX \\ \vspace{1pt}
+    \href{https://sahil.page}{sahil.page} $|$
+    \href{https://github.com/sahil007-ai}{github.com/sahil007-ai} $|$
+    \href{https://www.linkedin.com/in/sahil-somyani-637270319/}{linkedin.com/in/sahil-somyani}
+\end{center}
+
+%-----------SUMMARY-----------
+\section{Summary}
+Third-year B.Tech AI student building LLM applications with LangChain and LangGraph. Live multi-agent project at \href{https://sahil.page/projects/wikipedia-assistant}{sahil.page}. Comfortable across the GenAI prototyping stack (Python, FastAPI, Next.js) and classical ML (XGBoost, SHAP). Looking for a GenAI internship to go deeper on RAG and agentic systems.
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {JD College of Engineering and Management}{Nagpur, India}
+      {B.Tech in Artificial Intelligence \textemdash{} CGPA 8.35 / 10.0}{Aug.\ 2024 -- May 2028 (Expected)}
+      \resumeItemListStart
+        \resumeItem{Coursework: Machine Learning, Probability \& Statistics, Linear Algebra, Data Structures \& Algorithms, DBMS, Data Visualization.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{GenAI \& LLMs}{: LangChain, LangGraph, Ollama (local LLM), prompt engineering, multi-agent workflows, Tavily Search, FastAPI for LLM serving.} \\
+     \textbf{Languages}{: Python, JavaScript / TypeScript, SQL, C++.} \\
+     \textbf{ML \& Data}{: scikit-learn, XGBoost, SHAP, SMOTE, Pandas, NumPy, Matplotlib, Streamlit.} \\
+     \textbf{Computer Vision}{: OpenCV, MediaPipe.} \\
+     \textbf{Web \& Tooling}{: Next.js, Tailwind CSS, Git, GitHub, REST APIs.}
+    }}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+      {\textbf{Quick Wiki Research Assistant} $|$ \emph{LangGraph, LangChain, FastAPI, Tavily, Python}}{\href{https://sahil.page/projects/wikipedia-assistant}{Live Demo} $|$ \href{https://github.com/sahil007-ai/quick-wiki}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Shipped a multi-agent research assistant on LangGraph that turns a single topic prompt into a sourced report with citations.}
+        \resumeItem{Spawns AI analyst personas with distinct expertise, runs Wikipedia and Tavily searches in parallel, then synthesizes findings via state-managed iterative refinement.}
+        \resumeItem{Live demo serves real traffic; backend instrumented for token usage and per-step latency.}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{Plan4U \textemdash{} Local LLM Study Planner} $|$ \emph{JavaScript, Ollama, Prompt Engineering}}{\href{https://github.com/sahil007-ai/raisoni}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Built a privacy-first study planner that runs an open-source LLM locally via Ollama \textemdash{} no data leaves the user's device.}
+        \resumeItem{Designed structured prompts to extract course metadata, learning outcomes, and deadlines from unstructured syllabus text and produce a personalized weekly plan.}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{Customer Churn \& Behavioural Analytics} $|$ \emph{Python, XGBoost, SHAP, SMOTE, Streamlit}}{\href{https://github.com/sahil007-ai}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Built an attrition-risk classifier on $\sim$10{,}000 customer records and reached \textbf{F1 = 0.88} after addressing class imbalance with SMOTE oversampling.}
+        \resumeItem{Used SHAP feature attributions to surface the strongest churn drivers (contract type, tenure, monthly charges) and translated them into retention recommendations.}
+        \resumeItem{Wrapped the model in a Streamlit dashboard with cluster-level segmentation and a high-risk customer view.}
+      \resumeItemListEnd
+
+  \resumeProjectHeading
+      {\textbf{Focus Guard \textemdash{} CV-based Pomodoro Timer} $|$ \emph{Python, OpenCV, MediaPipe}}{\href{https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro}{GitHub}}
+      \resumeItemListStart
+        \resumeItem{Real-time desktop app that monitors user attention during focus sessions using MediaPipe head pose and Eye Aspect Ratio (EAR) for drowsiness.}
+        \resumeItem{\textbf{1st Place, Mini Project Exhibition 2025} \textemdash{} pauses sessions automatically when attention drops below threshold.}
+      \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{1st Place} \textemdash{} Mini Project Exhibition 2025, JD College of Engineering (\emph{Focus Guard}).}
+    \resumeItem{Selected as Resume Workshop Facilitator and Peer Mentor at JDCOEM (2025 \textendash{} present).}
+\resumeSubHeadingListEnd
+
+%-----------CERTIFICATIONS-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{Kaggle Learn} \textemdash{} Intro to Machine Learning + Intermediate Machine Learning (data analysis, feature engineering, model tuning).}
+    % TODO (Sahil): add DeepLearning.AI \emph{ChatGPT Prompt Engineering for Developers} once completed (free, ~1.5 hrs).
+    % TODO (Sahil): add DeepLearning.AI \emph{LangChain for LLM Application Development} once completed.
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Volunteering}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {National Service Scheme (NSS)}{2024 -- Present}
+      {Education Volunteer \& STEM Mentor}{}
+      \resumeItemListStart
+        \resumeItem{Mentor underprivileged school students; break down STEM concepts for non-technical audiences \textemdash{} core practice for technical communication.}
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
