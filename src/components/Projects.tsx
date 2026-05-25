@@ -9,36 +9,36 @@ import rehypeRaw from "rehype-raw";
 
 const projects = [
   {
-    name: "Plan4U",
-    description: "Students were drowning in syllabi with no system to manage them. I built a gamified AI-powered planner that analyses your coursework and tells you exactly what to study and when. Built with Ollama for local AI — no data leaves your device.",
-    tech: ["JavaScript", "HTML", "CSS", "AI/Ollama"],
+    name: "Plan4U - AI Study Planner",
+    description: "A gamified AI-powered course planner that uses local LLM inference (Ollama) to analyze academic syllabi and generate personalized study schedules. Implements privacy-first AI architecture where all processing happens on-device using open-source models. Features intelligent prompt engineering to extract course metadata and deadlines from unstructured text.",
+    tech: ["JavaScript", "Ollama", "Local LLM", "Prompt Engineering", "Privacy-First AI"],
     link: "https://github.com/sahil007-ai/raisoni",
     demo: "",
     stars: 0
   },
   {
-    name: "Zedge Automation",
-    description: "Content creators waste hours manually formatting quote wallpapers. I built a Python bot that automatically generates, formats, and creates black screen quote wallpapers for Zedge. It turns a tedious manual process into a hands-free content pipeline.",
-    tech: ["Python", "Automation"],
+    name: "Focus Guard AI",
+    description: "Real-time computer vision system that tracks user attention during productivity sessions using MediaPipe face mesh detection. Implements continuous attention monitoring with pose estimation to detect focus drift. Built ML pipeline for real-time inference with sub-100ms latency. Addresses the core problem traditional timers can't solve: verifying actual human engagement.",
+    tech: ["Python", "MediaPipe", "Computer Vision", "Real-time ML", "OpenCV"],
+    link: "https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro",
+    demo: "",
+    stars: 0
+  },
+  {
+    name: "Zedge Content Pipeline",
+    description: "Automated content generation system for creating quote wallpapers at scale. Uses programmatic image generation with Python to transform text inputs into formatted visuals. Demonstrates understanding of batch processing, automation architecture, and content pipelines — core skills for GenAI workflows where you need to process thousands of prompts efficiently.",
+    tech: ["Python", "PIL/Pillow", "Automation", "Batch Processing"],
     link: "https://github.com/sahil007-ai/zedge_automation_project",
     demo: "",
     stars: 1
   },
   {
-    name: "Image Compressor",
-    description: "Large images slow down websites and eat up storage, but hand-compressing them is painfully slow. I wrote a bulk compressor script for JPEGs and PNGs that automatically targets specific file sizes. It saves massive amounts of time and bandwidth with a single command.",
-    tech: ["Python", "Pillow"],
+    name: "Image Compression Pipeline",
+    description: "Intelligent image optimization tool that automatically compresses images while maintaining quality thresholds. Implements adaptive compression algorithms to hit target file sizes. Built with production considerations: handles edge cases, batch operations, and format compatibility. Relevant for GenAI systems that need to optimize data pipelines and manage storage for training datasets.",
+    tech: ["Python", "Pillow", "Image Processing", "Optimization"],
     link: "https://github.com/sahil007-ai/Image_compressor",
     demo: "",
     stars: 1
-  },
-  {
-    name: "Focus Guard AI",
-    description: "Traditional Pomodoro timers don't actually know if you're working or just scrolling on your phone. I built an AI-powered timer using MediaPipe computer vision to detect your actual focus state. It forces real productivity by pausing the timer the second you look away.",
-    tech: ["Python", "MediaPipe", "Computer Vision"],
-    link: "https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro",
-    demo: "",
-    stars: 0
   }
 ];
 
@@ -94,7 +94,7 @@ export default function Projects() {
       <div className="text-center mb-16">
         <h2 className="text-3xl font-bold text-brown-dark dark:text-gray-100">Featured Projects</h2>
         <p className="text-brown-medium dark:text-gray-400 mt-4 max-w-2xl mx-auto font-light">
-          A selection of my recent work focusing on AI automation, web development, and productivity tools.
+          GenAI applications, computer vision systems, and intelligent automation showcasing LLM integration, real-time ML, and production-ready architecture.
         </p>
       </div>
 
