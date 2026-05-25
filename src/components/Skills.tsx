@@ -3,9 +3,21 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "Python", "C++", "SQL", "TensorFlow", "Pandas", 
-  "Scikit-Learn", "Natural Language Processing", "Machine Learning", 
-  "Deep Learning", "Data Analysis", "Predictive Modeling"
+  // LLM & GenAI Core
+  "LangChain", "LlamaIndex", "OpenAI API", "Anthropic Claude", 
+  "HuggingFace Transformers", "Prompt Engineering", 
+  
+  // RAG & Vector Systems
+  "RAG Systems", "Pinecone", "ChromaDB", "Vector Databases",
+  "Semantic Search", "Embeddings",
+  
+  // ML & AI Foundations
+  "Python", "TensorFlow", "PyTorch", "Fine-tuning LLMs",
+  "NLP", "Computer Vision", "MediaPipe",
+  
+  // Development & Tools
+  "FastAPI", "Streamlit", "Git", "Docker",
+  "REST APIs", "SQL", "C++"
 ];
 
 export default function Skills() {
@@ -14,7 +26,7 @@ export default function Skills() {
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-brown-dark dark:text-gray-100">My Toolkit</h2>
         <p className="text-brown-medium dark:text-gray-400 mt-4 max-w-2xl mx-auto font-light">
-          Languages, frameworks, and tools I use to build scalable web applications and intelligent systems.
+          Technologies and frameworks I use to build GenAI applications, LLM systems, and intelligent automation.
         </p>
       </div>
 

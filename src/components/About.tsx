@@ -20,16 +20,16 @@ export default function About() {
         
         <div className="space-y-6 text-lg text-brown-medium dark:text-gray-300 leading-relaxed font-light">
           <p>
-            I&apos;m a final-year AI engineering student who picked up copywriting not as a backup plan — but because I realised that the most powerful machine learning model in the world is useless if no one understands why they need it.
+            I&apos;m a final-year AI engineering student specializing in large language models and generative AI. While most engineers are still learning prompt engineering, I&apos;ve been building production-ready LLM applications with RAG architectures, fine-tuning pipelines, and multi-agent orchestration.
           </p>
           <p>
-            I&apos;ve spent the last year studying what makes people say yes. I&apos;ve read the same books your best marketer has read. And I bring something most copywriters can&apos;t: I genuinely understand the technology I&apos;m writing about.
+            I chose to master technical writing alongside engineering — not as a backup, but because I realised that the most sophisticated AI system is worthless if engineers can&apos;t understand the architecture, stakeholders can&apos;t grasp the value, and users can&apos;t figure out how to use it.
           </p>
           <p>
-            When I&apos;m not training models or writing copy, I&apos;m hosting workshops, anchoring stages, and apparently solving algorithmic problems with my monitor turned off. Make of that what you will.
+            When I&apos;m not training models or architecting LLM systems, I&apos;m teaching others how to build them. I&apos;ve hosted technical workshops, mentored peers on AI engineering, and apparently can solve algorithmic problems with my monitor turned off (blind coding competition winner).
           </p>
           <p className="pt-2 font-medium">
-            Based in Nagpur. Working globally. Always thinking about the next problem worth solving.
+            Based in Nagpur. Building GenAI solutions. Always thinking about the next AI problem worth solving.
           </p>
         </div>
       </motion.div>
