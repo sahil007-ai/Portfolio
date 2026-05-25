@@ -127,7 +127,17 @@ export default function Projects() {
     }
   };
 
-  const renderProjectCard = (project: any, index: number, sectionPrefix: string) => {
+  type Project = {
+    name: string;
+    description: string;
+    tech: string[];
+    link: string;
+    demo: string;
+    stars: number;
+    status?: string;
+  };
+
+  const renderProjectCard = (project: Project, index: number, sectionPrefix: string) => {
     const projectId = `${sectionPrefix}-${index}`;
     const isExpanded = expandedIndex === projectId;
     const isLoading = loading[projectId];
