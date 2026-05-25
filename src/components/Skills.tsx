@@ -224,11 +224,11 @@ export default function Skills() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-2xl bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl z-50 max-h-[80vh] overflow-y-auto"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-3xl bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl z-50 flex flex-col max-h-[85vh]"
             >
-              {/* Header */}
-              <div className="sticky top-0 bg-white dark:bg-[#1E1E1E] border-b border-border/10 dark:border-[#333333] p-6 flex justify-between items-start">
-                <div>
+              {/* Header - Fixed */}
+              <div className="flex-shrink-0 bg-white dark:bg-[#1E1E1E] border-b border-border/10 dark:border-[#333333] p-6 flex justify-between items-start rounded-t-2xl">
+                <div className="flex-1 pr-4">
                   <h3 className="text-2xl font-bold text-brown-dark dark:text-gray-100 mb-2">
                     {selectedSkill.name}
                   </h3>
@@ -244,14 +244,15 @@ export default function Skills() {
                 </div>
                 <button
                   onClick={() => setSelectedSkill(null)}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-[#2A2A2A] rounded-full transition-colors"
+                  className="flex-shrink-0 p-2 hover:bg-gray-100 dark:hover:bg-[#2A2A2A] rounded-full transition-colors"
+                  aria-label="Close"
                 >
                   <X className="w-5 h-5 text-gray-500" />
                 </button>
               </div>
 
-              {/* Content */}
-              <div className="p-6">
+              {/* Content - Scrollable */}
+              <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
                 {/* Description */}
                 <p className="text-brown-medium dark:text-gray-300 leading-relaxed mb-6">
                   {selectedSkill.description}
@@ -261,18 +262,18 @@ export default function Skills() {
                 {selectedSkill.projects.length > 0 ? (
                   <div>
                     <h4 className="text-lg font-semibold text-brown-dark dark:text-gray-100 mb-4">
-                      {selectedSkill.status === "learning" ? "Will use in:" : "Used in:"}
+                      {selectedSkill.status === "learning" ? "Will use in:" : "Used in:"} <span className="text-sm font-normal text-gray-500">({selectedSkill.projects.length} {selectedSkill.projects.length === 1 ? 'project' : 'projects'})</span>
                     </h4>
-                    <div className="space-y-3">
+                    <div className="grid grid-cols-1 gap-3">
                       {selectedSkill.projects.map((project) => (
                         <div
                           key={project.name}
-                          className="flex items-center justify-between p-4 bg-surface dark:bg-[#1A1A1A] rounded-xl border border-border/10 dark:border-[#333333] hover:border-accent dark:hover:border-accent transition-colors"
+                          className="flex items-center justify-between p-4 bg-surface dark:bg-[#1A1A1A] rounded-xl border border-border/10 dark:border-[#333333] hover:border-accent dark:hover:border-accent transition-all hover:shadow-md group"
                         >
-                          <span className="font-medium text-brown-dark dark:text-gray-200">
+                          <span className="font-medium text-brown-dark dark:text-gray-200 group-hover:text-accent dark:group-hover:text-accent transition-colors">
                             {project.name}
                           </span>
-                          <span className={`text-xs px-3 py-1 rounded-full ${getProjectStatusBadge(project.status)}`}>
+                          <span className={`text-xs px-3 py-1 rounded-full whitespace-nowrap ${getProjectStatusBadge(project.status)}`}>
                             {getProjectStatusText(project.status)}
                           </span>
                         </div>
