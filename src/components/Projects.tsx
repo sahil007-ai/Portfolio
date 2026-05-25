@@ -18,13 +18,13 @@ const genAIProjects = [
     status: "In Development"
   },
   {
-    name: "Wikipedia Research Assistant",
-    description: "RAG-powered research tool that answers complex questions by retrieving and synthesizing information from Wikipedia articles. Implements semantic search with vector embeddings, context-aware response generation, and citation tracking. Uses LangChain for orchestration, vector database for efficient retrieval, and streaming responses for real-time user feedback.",
-    tech: ["LangChain", "RAG", "Vector Databases", "OpenAI API", "Semantic Search"],
-    link: "#",
-    demo: "",
+    name: "Quick Wiki Research Assistant",
+    description: "Multi-agent research assistant powered by LangGraph that generates comprehensive reports on any topic. Creates AI analyst personas with diverse expertise, conducts parallel research via Wikipedia and web search, then synthesizes findings into structured reports with citations. Features agent orchestration with state management, iterative refinement workflows, and real-time progress tracking.",
+    tech: ["LangGraph", "LangChain", "Python", "FastAPI", "Multi-Agent Systems", "Tavily Search"],
+    link: "https://github.com/sahil007-ai/quick-wiki",
+    demo: "https://sahil.page/projects/wikipedia-assistant",
     stars: 0,
-    status: "Planned"
+    status: "Live"
   },
   {
     name: "PDF Insight Extractor",
@@ -165,7 +165,9 @@ export default function Projects() {
               <h3 className="text-xl font-bold text-brown-dark dark:text-gray-100">{project.name}</h3>
               {project.status && (
                 <span className={`text-xs px-2 py-1 rounded-full ${
-                  project.status === "In Development" 
+                  project.status === "Live" 
+                    ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300"
+                    : project.status === "In Development" 
                     ? "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300"
                     : "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
                 }`}>
