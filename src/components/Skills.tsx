@@ -224,15 +224,15 @@ export default function Skills() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-3xl bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl z-50 flex flex-col max-h-[85vh]"
+              className="fixed inset-4 sm:inset-8 md:inset-12 lg:inset-16 xl:inset-20 m-auto w-full max-w-4xl h-fit max-h-[90vh] bg-white dark:bg-[#1E1E1E] rounded-2xl shadow-2xl z-50 flex flex-col"
             >
               {/* Header - Fixed */}
-              <div className="flex-shrink-0 bg-white dark:bg-[#1E1E1E] border-b border-border/10 dark:border-[#333333] p-6 flex justify-between items-start rounded-t-2xl">
+              <div className="flex-shrink-0 bg-white dark:bg-[#1E1E1E] border-b border-border/10 dark:border-[#333333] p-5 sm:p-6 flex justify-between items-center rounded-t-2xl">
                 <div className="flex-1 pr-4">
-                  <h3 className="text-2xl font-bold text-brown-dark dark:text-gray-100 mb-2">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-brown-dark dark:text-gray-100 mb-2">
                     {selectedSkill.name}
                   </h3>
-                  <span className={`text-xs px-3 py-1 rounded-full ${
+                  <span className={`text-xs px-3 py-1 rounded-full font-medium ${
                     selectedSkill.status === "expert" ? "bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300" :
                     selectedSkill.status === "proficient" ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300" :
                     "bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300"
@@ -247,42 +247,52 @@ export default function Skills() {
                   className="flex-shrink-0 p-2 hover:bg-gray-100 dark:hover:bg-[#2A2A2A] rounded-full transition-colors"
                   aria-label="Close"
                 >
-                  <X className="w-5 h-5 text-gray-500" />
+                  <X className="w-6 h-6 text-gray-500 dark:text-gray-400" />
                 </button>
               </div>
 
               {/* Content - Scrollable */}
-              <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
+              <div className="flex-1 overflow-y-auto p-6 sm:p-8 custom-scrollbar">
                 {/* Description */}
-                <p className="text-brown-medium dark:text-gray-300 leading-relaxed mb-6">
-                  {selectedSkill.description}
-                </p>
+                <div className="mb-8 p-4 bg-peach/30 dark:bg-[#2A2A2A]/30 rounded-xl border border-border/10 dark:border-[#333333]">
+                  <p className="text-brown-medium dark:text-gray-300 leading-relaxed">
+                    {selectedSkill.description}
+                  </p>
+                </div>
 
                 {/* Projects Section */}
                 {selectedSkill.projects.length > 0 ? (
                   <div>
-                    <h4 className="text-lg font-semibold text-brown-dark dark:text-gray-100 mb-4">
-                      {selectedSkill.status === "learning" ? "Will use in:" : "Used in:"} <span className="text-sm font-normal text-gray-500">({selectedSkill.projects.length} {selectedSkill.projects.length === 1 ? 'project' : 'projects'})</span>
-                    </h4>
-                    <div className="grid grid-cols-1 gap-3">
-                      {selectedSkill.projects.map((project) => (
-                        <div
+                    <div className="flex items-center justify-between mb-6">
+                      <h4 className="text-xl font-bold text-brown-dark dark:text-gray-100">
+                        {selectedSkill.status === "learning" ? "Will use in:" : "Used in:"}
+                      </h4>
+                      <span className="text-sm font-medium text-gray-500 dark:text-gray-400 px-3 py-1 bg-gray-100 dark:bg-[#2A2A2A] rounded-full">
+                        {selectedSkill.projects.length} {selectedSkill.projects.length === 1 ? 'project' : 'projects'}
+                      </span>
+                    </div>
+                    <div className="space-y-4">
+                      {selectedSkill.projects.map((project, idx) => (
+                        <motion.div
                           key={project.name}
-                          className="flex items-center justify-between p-4 bg-surface dark:bg-[#1A1A1A] rounded-xl border border-border/10 dark:border-[#333333] hover:border-accent dark:hover:border-accent transition-all hover:shadow-md group"
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: idx * 0.05 }}
+                          className="flex items-center justify-between p-5 bg-surface dark:bg-[#1A1A1A] rounded-xl border-2 border-border/10 dark:border-[#333333] hover:border-accent dark:hover:border-accent transition-all hover:shadow-lg hover:scale-[1.02] group cursor-pointer"
                         >
-                          <span className="font-medium text-brown-dark dark:text-gray-200 group-hover:text-accent dark:group-hover:text-accent transition-colors">
+                          <span className="font-semibold text-base text-brown-dark dark:text-gray-200 group-hover:text-accent dark:group-hover:text-accent transition-colors">
                             {project.name}
                           </span>
-                          <span className={`text-xs px-3 py-1 rounded-full whitespace-nowrap ${getProjectStatusBadge(project.status)}`}>
+                          <span className={`text-xs font-medium px-4 py-2 rounded-full whitespace-nowrap ${getProjectStatusBadge(project.status)}`}>
                             {getProjectStatusText(project.status)}
                           </span>
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
                   </div>
                 ) : (
-                  <div className="text-center py-8 text-gray-500 dark:text-gray-400">
-                    <p>No projects using this skill yet.</p>
+                  <div className="text-center py-12 text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-[#1A1A1A] rounded-xl">
+                    <p className="text-lg">No projects using this skill yet.</p>
                     <p className="text-sm mt-2">Will be incorporated in upcoming work.</p>
                   </div>
                 )}
