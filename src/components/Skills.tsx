@@ -102,14 +102,6 @@ const skillsData: SkillData[] = [
   
   // Supporting Skills
   {
-    name: "Git",
-    description: "Version control for code collaboration. Proficient in branching, merging, and GitHub workflows.",
-    status: "expert",
-    projects: [
-      { name: "All Projects", status: "completed" }
-    ]
-  },
-  {
     name: "SQL",
     description: "Database querying for data management. Used for storing application data and user information.",
     status: "proficient",
