@@ -251,7 +251,7 @@ export default function WikipediaAssistant() {
       </section>
 
       {/* Main Content */}
-      <section className="px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto pb-20">
+      <section className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Left Column - Input Form + Past Reports */}
           <div className="lg:col-span-1 space-y-6">
@@ -451,7 +451,7 @@ export default function WikipediaAssistant() {
                     Research Report
                   </h2>
                 </div>
-                <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none prose-headings:text-brown-dark dark:prose-headings:text-gray-100 prose-p:text-brown-medium dark:prose-p:text-gray-300 prose-a:text-accent prose-strong:text-brown-dark dark:prose-strong:text-gray-100 prose-ul:text-brown-medium dark:prose-ul:text-gray-300 prose-ol:text-brown-medium dark:prose-ol:text-gray-300">
+                <div className="prose prose-sm sm:prose-base dark:prose-invert max-w-none break-words prose-headings:text-brown-dark dark:prose-headings:text-gray-100 prose-p:text-brown-medium dark:prose-p:text-gray-300 prose-a:text-accent prose-a:break-all prose-strong:text-brown-dark dark:prose-strong:text-gray-100 prose-ul:text-brown-medium dark:prose-ul:text-gray-300 prose-ol:text-brown-medium dark:prose-ol:text-gray-300 overflow-hidden">
                   <ReactMarkdown remarkPlugins={[remarkGfm]}>
                     {result.final_report}
                   </ReactMarkdown>
