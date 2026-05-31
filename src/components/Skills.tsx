@@ -39,7 +39,7 @@ const skillsData: SkillData[] = [
     description: "Crafting effective prompts for LLMs to get optimal outputs. Includes few-shot learning, chain-of-thought, and system prompt design.",
     status: "proficient",
     projects: [
-      { name: "Plan4U - AI Study Planner", status: "completed" },
+      { name: "Florista - Organza Flowers E-Commerce", status: "completed" },
       { name: "LangGraph Game Generator", status: "in-progress" }
     ]
   },
@@ -51,7 +51,7 @@ const skillsData: SkillData[] = [
       { name: "Wikipedia Research Assistant", status: "in-progress" },
       { name: "LangGraph Game Generator", status: "in-progress" },
       { name: "Focus Guard AI", status: "completed" },
-      { name: "Zedge Content Pipeline", status: "completed" }
+      { name: "Florista - Organza Flowers E-Commerce", status: "completed" }
     ]
   },
   

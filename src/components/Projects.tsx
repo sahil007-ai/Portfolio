@@ -30,11 +30,11 @@ const genAIProjects = [
 
 const vibeCodedProjects = [
   {
-    name: "Plan4U - AI Study Planner",
-    description: "A gamified AI-powered course planner that uses local LLM inference (Ollama) to analyze academic syllabi and generate personalized study schedules. Implements privacy-first AI architecture where all processing happens on-device using open-source models. Features intelligent prompt engineering to extract course metadata and deadlines from unstructured text.",
-    tech: ["JavaScript", "Ollama", "Local LLM", "Prompt Engineering", "Privacy-First AI"],
-    link: "https://github.com/sahil007-ai/raisoni",
-    demo: "",
+    name: "Florista - Organza Flowers E-Commerce",
+    description: "A complete manufacturing company website for selling organza flowers, built entirely with vibe coding using Kiro AI. Features product catalogue with SEO-optimized per-product pages, WhatsApp quote cart integration, sales/discount system, GA4 analytics with WhatsApp click attribution, and CI/CD with automated validators. Demonstrates full-stack vibe coding from design system to deployment pipeline.",
+    tech: ["HTML", "CSS", "JavaScript", "Python", "Vercel", "GitHub Actions"],
+    link: "https://github.com/sahil007-ai/Florista",
+    demo: "https://florista-delta.vercel.app/",
     stars: 0
   },
   {
@@ -44,22 +44,6 @@ const vibeCodedProjects = [
     link: "https://github.com/sahil007-ai/cv-focus-guard-ai-pomodoro",
     demo: "",
     stars: 0
-  },
-  {
-    name: "Zedge Content Pipeline",
-    description: "Automated content generation system for creating quote wallpapers at scale. Uses programmatic image generation with Python to transform text inputs into formatted visuals. Demonstrates understanding of batch processing, automation architecture, and content pipelines — core skills for GenAI workflows where you need to process thousands of prompts efficiently.",
-    tech: ["Python", "PIL/Pillow", "Automation", "Batch Processing"],
-    link: "https://github.com/sahil007-ai/zedge_automation_project",
-    demo: "",
-    stars: 1
-  },
-  {
-    name: "Image Compression Pipeline",
-    description: "Intelligent image optimization tool that automatically compresses images while maintaining quality thresholds. Implements adaptive compression algorithms to hit target file sizes. Built with production considerations: handles edge cases, batch operations, and format compatibility. Relevant for GenAI systems that need to optimize data pipelines and manage storage for training datasets.",
-    tech: ["Python", "Pillow", "Image Processing", "Optimization"],
-    link: "https://github.com/sahil007-ai/Image_compressor",
-    demo: "",
-    stars: 1
   }
 ];
 
