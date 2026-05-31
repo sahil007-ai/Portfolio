@@ -35,7 +35,8 @@ const vibeCodedProjects = [
     tech: ["HTML", "CSS", "JavaScript", "Python", "Vercel", "GitHub Actions"],
     link: "https://github.com/sahil007-ai/Florista",
     demo: "https://florista-delta.vercel.app/",
-    stars: 0
+    stars: 0,
+    status: "Live"
   },
   {
     name: "Focus Guard AI",
